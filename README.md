@@ -37,7 +37,11 @@ This documentation provides details on the available command-line arguments for 
   - **Description**: Specify the video to process
   - **Type**: Optional argument (`nargs='?'`)
 
-## Usage
+## Example Usage
 
 ```shell
-python project.py -f file1 file2 -x xytech_YYYYMMDD.txt -v -o csv
+python project.py -f file1.txt file2.txt -x xytech_YYYYMMDD.txt -v -o csv
+
+or
+
+python project.py -p video.mp4 -v -o xls
