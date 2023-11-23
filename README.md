@@ -12,6 +12,7 @@ to run script (windows):
 - run program
 
 project_full.py contains the code for the previous two phases along with the new phase three
+
 project_lite.py contains only the code for phase three
 
 # Command-Line Tool Documentation
