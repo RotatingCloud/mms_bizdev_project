@@ -159,20 +159,24 @@ class Project3:
             try:
                 upload_url = data['upload_urls'][0]
             except KeyError:
-                # Log detailed error information
                 logging.error(f"KeyError: 'upload_urls' not found in response. Response data: {data}")
-                return  # Or handle the error as needed
+                return
 
             with open(path, 'rb') as f:
+
                 headers = {
                     'content-type': 'image/bmp',
                     'x-amz-acl': 'private',
                 }
+
                 response = requests.put(upload_url, data=f, headers=headers)
+
             if response.status_code == 200:
-                #self.verbose and print(f"{thumbnail} uploaded successfully")
+                
                 pass
+
             else:
+                
                 print(f"An error occurred while uploading {thumbnail}: {response.text}")
         
         except Exception as e:
