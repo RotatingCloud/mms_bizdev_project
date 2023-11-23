@@ -11,9 +11,8 @@ to run script (windows):
 - ask me for .env (only for the homies)
 - run program
 
-project_full.py contains the code for the previous two phases along with the new phase three
-
-project_lite.py contains only the code for phase three
+project_full.py contains the code for the previous two phases along with the new phase three__
+project_lite.py contains only the code for phase three__
 
 # Command-Line Tool Documentation
 
