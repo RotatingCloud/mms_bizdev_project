@@ -4,7 +4,7 @@ REQUIREMENTS (make sure you have these installed before running):
 - ffmpeg
 - python 3.11.5
 
-to run script:
+to run script (windows):
 - create venv with `python -m venv venv`
 - activate venv `./venv/Scripts/Activate`
 - install req `pip install -r requirements.txt`
