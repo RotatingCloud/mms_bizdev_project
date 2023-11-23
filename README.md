@@ -4,18 +4,22 @@ REQUIREMENTS (make sure you have these installed before running):
 - ffmpeg
 - python 3.11.5
 
-to run script:
+to run script (windows):
 - create venv with `python -m venv venv`
 - activate venv `./venv/Scripts/Activate`
 - install req `pip install -r requirements.txt`
 - ask me for .env (only for the homies)
 - run program
 
+project_full.py contains the code for the previous two phases along with the new phase three__
+project_lite.py contains only the code for phase three__
+
 # Command-Line Tool Documentation
 
 This documentation provides details on the available command-line arguments for the tool.
 
-## Arguments
+## Arguments 
+##(ONLY USEABLE WITH project_full.py)
 
 - `-f`, `--files`
   - **Description**: Files to be processed
@@ -32,6 +36,8 @@ This documentation provides details on the available command-line arguments for 
 - `-o`, `--output`
   - **Description**: Format of the output (either as csv file or database (or xls only if --process is flagged))
     - none if no output needed
+
+##(USEABLE WITH BOTH project_full.py and project_lite.py)
 
 - `-p`, `--process`
   - **Description**: Specify the video to process
