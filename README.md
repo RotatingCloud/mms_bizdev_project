@@ -18,7 +18,8 @@ project_lite.py contains only the code for phase three__
 
 This documentation provides details on the available command-line arguments for the tool.
 
-## Arguments
+## Arguments 
+##(ONLY USEABLE WITH project_full.py)
 
 - `-f`, `--files`
   - **Description**: Files to be processed
@@ -35,6 +36,8 @@ This documentation provides details on the available command-line arguments for 
 - `-o`, `--output`
   - **Description**: Format of the output (either as csv file or database (or xls only if --process is flagged))
     - none if no output needed
+
+##(USEABLE WITH BOTH project_full.py and project_lite.py)
 
 - `-p`, `--process`
   - **Description**: Specify the video to process
