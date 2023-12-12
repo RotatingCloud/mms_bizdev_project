@@ -1,5 +1,6 @@
 .env
 /venv
+/misc
 *.log
 *.mp4
 *.xls
