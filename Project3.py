@@ -9,32 +9,9 @@ import subprocess
 import xlsxwriter
 import shutil
 import requests
+
 from dotenv import load_dotenv
 load_dotenv()
-
-import logging
-
-logging.basicConfig(filename='misc/error_log.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s:%(message)s')
-
-class style():
-
-    RESET = '\033[0m'
-    BLACK = '\033[30m'
-    RED = '\033[31m'
-    GREEN = '\033[32m'
-    YELLOW = '\033[33m'
-    BLUE = '\033[34m'
-    MAGENTA = '\033[35m'
-    CYAN = '\033[36m'
-    WHITE = '\033[37m'
-    BRIGHT_BLACK = '\033[90m'
-    BRIGHT_RED = '\033[91m'
-    BRIGHT_GREEN = '\033[92m'
-    BRIGHT_YELLOW = '\033[93m'
-    BRIGHT_BLUE = '\033[94m'
-    BRIGHT_MAGENTA = '\033[95m'
-    BRIGHT_CYAN = '\033[96m'
-    BRIGHT_WHITE = '\033[97m'
 
 class Entry:
 
@@ -327,7 +304,6 @@ class Project3:
             try:
                 upload_url = data['upload_urls'][0]
             except KeyError:
-                logging.error(f"KeyError: 'upload_urls' not found in response. Response data: {data}")
                 return
 
             with open(path, 'rb') as f:
@@ -351,8 +327,6 @@ class Project3:
         except Exception as e:
 
             print(f"An error occurred while uploading {thumbnail}: {e}")
-            logging.error(f"An error occurred: {e}")
-            logging.debug(f"Error details: {e}, Response: {response.text}")
 
     def upload_images(self):
 
@@ -389,7 +363,6 @@ class Project3:
         elif self.output != 'xls':
             self.verbose and print("\nInvalid output type")
         else:
-            # self.verbose and print(style.YELLOW + "Exporting to .xls file" + style.RESET)
             if not os.path.exists('thumbnails'):
                 os.makedirs('thumbnails')
             else:
@@ -403,7 +376,7 @@ class Project3:
             self.export_to_xlsx(sorted_frames)
             self.upload_images()
             self.delete_thumbnails()
-            self.verbose and print('\033[47m' + style.BRIGHT_GREEN + " Done! " + style.RESET)
+            self.verbose and print(" Done! ")
 
 parser = ap.ArgumentParser()
 parser.add_argument('-f','--files', dest='files', nargs='*', help="Files to be processed")
